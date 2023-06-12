@@ -69,11 +69,16 @@ const mainGame = () => {
     currentPlayer = player1
     isOver = false
     messageElement.textContent = `${currentPlayer.name} turn`
+    
+    fieldElements.forEach((field) => {
+      field.classList.remove(player1.className, player2.className)
+    });
   };
-
+    
   fieldElements.forEach((field) => {
     field.addEventListener("click", handleFieldClick)
   });
+  
 
   restartBtn.addEventListener("click", restart)
 
