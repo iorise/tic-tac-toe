@@ -1,0 +1,142 @@
+:root {
+  --font-color: #0086e4;
+  --font-color2: #f28113;
+  --board-color: #66b3e9;
+  --outline-color: #ffff;
+  --shadow-color: #000;
+  --font-xl: 24px;
+  --line-spacing-xl: 24px;
+}
+
+/* reset css */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* main */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: var(--font-color2);
+  text-shadow: 1px 1px 0px var(--shadow-color);
+  font-size: 50px;
+}
+
+.message {
+  color: var(--font-color);
+  font-size: var(--font-xl);
+  font-weight: 600;
+  text-shadow: 0.2px 0.5px 0px var(--shadow-color);
+  line-height: 1.5;
+}
+
+/* main */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 454px;
+  height: 454px;
+  border: 3px solid var(--board-color);
+  margin: 10px auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.field {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--board-color);
+  text-align: center;
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 800;
+}
+
+.field-x {
+  color: #f28113;
+  -webkit-text-stroke: 3px var(--outline-color);
+}
+
+.field-o {
+  color: #0086e4;
+  -webkit-text-stroke: 3px var(--outline-color);
+}
+
+.restart-div {
+  padding: 15px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  transition: 0.3s ease-in-out;
+  border: 1px solid grey;
+  margin-top: var(--line-spacing-xl);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width:660px) {
+  .header h1 {
+    font-size: 50px;
+  }
+  .message {
+    font-size: 30px;
+  }
+  .button {
+    font-size: 20px;
+  }
+  .board {
+    width: 304px;
+    height: 304px;
+  }
+  .field{
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header h1{
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .message {
+    font-size: 26px;
+  }
+  .button {
+    font-size: 16px;
+  }
+
+}
